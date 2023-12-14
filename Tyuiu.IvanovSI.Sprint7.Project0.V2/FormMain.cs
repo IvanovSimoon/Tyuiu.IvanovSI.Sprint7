@@ -103,6 +103,14 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             
 
         }
+
+        
+
+        private void buttonStat_ISI_Click(object sender, EventArgs e)
+        {
+            FormStat formStat = new FormStat();
+            formStat.ShowDialog();
+        }
     }
    
 }   
