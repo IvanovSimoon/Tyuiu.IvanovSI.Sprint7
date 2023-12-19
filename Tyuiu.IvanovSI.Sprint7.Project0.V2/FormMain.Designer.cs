@@ -30,120 +30,151 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button9 = new System.Windows.Forms.Button();
+            this.openFileDialog_ISI = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip_ISI = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.groupBoxSearch_ISI = new System.Windows.Forms.GroupBox();
+            this.textBoxSearch_ISI = new System.Windows.Forms.TextBox();
+            this.buttonStat_ISI = new System.Windows.Forms.Button();
+            this.buttonSort_ISI = new System.Windows.Forms.Button();
+            this.buttonEdit_ISI = new System.Windows.Forms.Button();
+            this.buttonOpenFile_ISI = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonHelp_ISI = new System.Windows.Forms.Button();
+            this.buttonSave_ISI = new System.Windows.Forms.Button();
             this.panelView_ISI = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
-            this.buttonStat_ISI = new System.Windows.Forms.Button();
+            this.dataGridViewIn_ISI = new System.Windows.Forms.DataGridView();
+            this.saveFileDialog_ISI = new System.Windows.Forms.SaveFileDialog();
+            this.contextMenuStrip_ISI = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.номерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.адресМагазинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фИОПоставщикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поВозрастаниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поУбываниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поВозрастаниюToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.поУбываниюToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.аЯToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.яАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.аЯToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.яАToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.groupBoxSearch_ISI.SuspendLayout();
             this.panelView_ISI.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_ISI)).BeginInit();
+            this.contextMenuStrip_ISI.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // openFileDialog_ISI
             // 
-            this.button5.Location = new System.Drawing.Point(109, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(39, 35);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-    
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(154, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(39, 35);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "button5";
-            this.button6.UseVisualStyleBackColor = true;
-     
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(199, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(39, 35);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "button5";
-            this.button7.UseVisualStyleBackColor = true;
-            
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(852, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button5";
-            this.button1.UseVisualStyleBackColor = true;
-        
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(807, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button5";
-            this.button2.UseVisualStyleBackColor = true;
-            
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(3, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(39, 35);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "button5";
-            this.button9.UseVisualStyleBackColor = true;
-            
+            this.openFileDialog_ISI.FileName = "openFileDialog1";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBoxSearch_ISI);
             this.panel1.Controls.Add(this.buttonStat_ISI);
+            this.panel1.Controls.Add(this.buttonSort_ISI);
+            this.panel1.Controls.Add(this.buttonEdit_ISI);
+            this.panel1.Controls.Add(this.buttonOpenFile_ISI);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.buttonHelp_ISI);
+            this.panel1.Controls.Add(this.buttonSave_ISI);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 68);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // groupBoxSearch_ISI
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(616, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button5";
-            this.button3.UseVisualStyleBackColor = true;
-           
+            this.groupBoxSearch_ISI.Controls.Add(this.textBoxSearch_ISI);
+            this.groupBoxSearch_ISI.Location = new System.Drawing.Point(307, 3);
+            this.groupBoxSearch_ISI.Name = "groupBoxSearch_ISI";
+            this.groupBoxSearch_ISI.Size = new System.Drawing.Size(187, 46);
+            this.groupBoxSearch_ISI.TabIndex = 5;
+            this.groupBoxSearch_ISI.TabStop = false;
+            this.groupBoxSearch_ISI.Text = "Поиск";
+            // 
+            // textBoxSearch_ISI
+            // 
+            this.textBoxSearch_ISI.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSearch_ISI.Name = "textBoxSearch_ISI";
+            this.textBoxSearch_ISI.Size = new System.Drawing.Size(175, 20);
+            this.textBoxSearch_ISI.TabIndex = 4;
+            this.textBoxSearch_ISI.TextChanged += new System.EventHandler(this.textBoxSearch_ISI_TextChanged);
+            // 
+            // buttonStat_ISI
+            // 
+            this.buttonStat_ISI.Location = new System.Drawing.Point(665, 3);
+            this.buttonStat_ISI.Name = "buttonStat_ISI";
+            this.buttonStat_ISI.Size = new System.Drawing.Size(116, 35);
+            this.buttonStat_ISI.TabIndex = 3;
+            this.buttonStat_ISI.Text = "Статистика";
+            this.buttonStat_ISI.UseVisualStyleBackColor = true;
+            this.buttonStat_ISI.Click += new System.EventHandler(this.buttonStat_ISI_Click);
+            // 
+            // buttonSort_ISI
+            // 
+            this.buttonSort_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.table_sort;
+            this.buttonSort_ISI.Location = new System.Drawing.Point(150, 3);
+            this.buttonSort_ISI.Name = "buttonSort_ISI";
+            this.buttonSort_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonSort_ISI.TabIndex = 2;
+            this.buttonSort_ISI.UseVisualStyleBackColor = true;
+            this.buttonSort_ISI.Click += new System.EventHandler(this.buttonSort_ISI_Click);
+            // 
+            // buttonEdit_ISI
+            // 
+            this.buttonEdit_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.page_white_edit;
+            this.buttonEdit_ISI.Location = new System.Drawing.Point(95, 3);
+            this.buttonEdit_ISI.Name = "buttonEdit_ISI";
+            this.buttonEdit_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonEdit_ISI.TabIndex = 2;
+            this.buttonEdit_ISI.UseVisualStyleBackColor = true;
+            // 
+            // buttonOpenFile_ISI
+            // 
+            this.buttonOpenFile_ISI.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonOpenFile_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.application_add;
+            this.buttonOpenFile_ISI.Location = new System.Drawing.Point(5, 3);
+            this.buttonOpenFile_ISI.Name = "buttonOpenFile_ISI";
+            this.buttonOpenFile_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonOpenFile_ISI.TabIndex = 2;
+            this.buttonOpenFile_ISI.UseVisualStyleBackColor = false;
+            this.buttonOpenFile_ISI.Click += new System.EventHandler(this.buttonOpenFile_ISI_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.help;
+            this.button1.Location = new System.Drawing.Point(787, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 46);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonHelp_ISI
+            // 
+            this.buttonHelp_ISI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.help;
+            this.buttonHelp_ISI.Location = new System.Drawing.Point(842, 3);
+            this.buttonHelp_ISI.Name = "buttonHelp_ISI";
+            this.buttonHelp_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonHelp_ISI.TabIndex = 2;
+            this.buttonHelp_ISI.UseVisualStyleBackColor = true;
+            this.buttonHelp_ISI.Click += new System.EventHandler(this.buttonHelp_ISI_Click);
+            // 
+            // buttonSave_ISI
+            // 
+            this.buttonSave_ISI.Location = new System.Drawing.Point(543, 3);
+            this.buttonSave_ISI.Name = "buttonSave_ISI";
+            this.buttonSave_ISI.Size = new System.Drawing.Size(116, 35);
+            this.buttonSave_ISI.TabIndex = 2;
+            this.buttonSave_ISI.Text = "Сохранить ";
+            this.buttonSave_ISI.UseVisualStyleBackColor = true;
+            this.buttonSave_ISI.Click += new System.EventHandler(this.buttonSave_ISI_Click);
             // 
             // panelView_ISI
             // 
@@ -157,7 +188,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridViewIn_ISI);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
@@ -167,35 +198,116 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // dataGridView1
+            // dataGridViewIn_ISI
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(874, 451);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewIn_ISI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIn_ISI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewIn_ISI.Location = new System.Drawing.Point(5, 18);
+            this.dataGridViewIn_ISI.Name = "dataGridViewIn_ISI";
+            this.dataGridViewIn_ISI.Size = new System.Drawing.Size(874, 451);
+            this.dataGridViewIn_ISI.TabIndex = 0;
             // 
-            // button8
+            // contextMenuStrip_ISI
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(494, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(116, 35);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "button5";
-            this.button8.UseVisualStyleBackColor = true;
-       
+            this.contextMenuStrip_ISI.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ценаToolStripMenuItem,
+            this.номерToolStripMenuItem,
+            this.адресМагазинаToolStripMenuItem,
+            this.фИОПоставщикаToolStripMenuItem});
+            this.contextMenuStrip_ISI.Name = "contextMenuStrip_ISI";
+            this.contextMenuStrip_ISI.Size = new System.Drawing.Size(181, 114);
             // 
-            // buttonStat_ISI
+            // ценаToolStripMenuItem
             // 
-            this.buttonStat_ISI.Location = new System.Drawing.Point(310, 3);
-            this.buttonStat_ISI.Name = "buttonStat_ISI";
-            this.buttonStat_ISI.Size = new System.Drawing.Size(116, 35);
-            this.buttonStat_ISI.TabIndex = 3;
-            this.buttonStat_ISI.Text = "Статистика";
-            this.buttonStat_ISI.UseVisualStyleBackColor = true;
-            this.buttonStat_ISI.Click += new System.EventHandler(this.buttonStat_ISI_Click);
+            this.ценаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поВозрастаниюToolStripMenuItem,
+            this.поУбываниюToolStripMenuItem});
+            this.ценаToolStripMenuItem.Name = "ценаToolStripMenuItem";
+            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ценаToolStripMenuItem.Text = "Цена";
+            // 
+            // номерToolStripMenuItem
+            // 
+            this.номерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поВозрастаниюToolStripMenuItem1,
+            this.поУбываниюToolStripMenuItem1});
+            this.номерToolStripMenuItem.Name = "номерToolStripMenuItem";
+            this.номерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.номерToolStripMenuItem.Text = "Номер";
+            // 
+            // адресМагазинаToolStripMenuItem
+            // 
+            this.адресМагазинаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.аЯToolStripMenuItem,
+            this.яАToolStripMenuItem});
+            this.адресМагазинаToolStripMenuItem.Name = "адресМагазинаToolStripMenuItem";
+            this.адресМагазинаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.адресМагазинаToolStripMenuItem.Text = "Название магазина";
+            // 
+            // фИОПоставщикаToolStripMenuItem
+            // 
+            this.фИОПоставщикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.аЯToolStripMenuItem1,
+            this.яАToolStripMenuItem1});
+            this.фИОПоставщикаToolStripMenuItem.Name = "фИОПоставщикаToolStripMenuItem";
+            this.фИОПоставщикаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.фИОПоставщикаToolStripMenuItem.Text = "ФИО поставщика";
+            // 
+            // поВозрастаниюToolStripMenuItem
+            // 
+            this.поВозрастаниюToolStripMenuItem.Name = "поВозрастаниюToolStripMenuItem";
+            this.поВозрастаниюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поВозрастаниюToolStripMenuItem.Text = "По возрастанию";
+            this.поВозрастаниюToolStripMenuItem.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem_Click);
+            // 
+            // поУбываниюToolStripMenuItem
+            // 
+            this.поУбываниюToolStripMenuItem.Name = "поУбываниюToolStripMenuItem";
+            this.поУбываниюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.поУбываниюToolStripMenuItem.Text = "По убыванию";
+            this.поУбываниюToolStripMenuItem.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem_Click);
+            // 
+            // поВозрастаниюToolStripMenuItem1
+            // 
+            this.поВозрастаниюToolStripMenuItem1.Name = "поВозрастаниюToolStripMenuItem1";
+            this.поВозрастаниюToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поВозрастаниюToolStripMenuItem1.Text = "По возрастанию";
+            this.поВозрастаниюToolStripMenuItem1.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem1_Click);
+            // 
+            // поУбываниюToolStripMenuItem1
+            // 
+            this.поУбываниюToolStripMenuItem1.Name = "поУбываниюToolStripMenuItem1";
+            this.поУбываниюToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поУбываниюToolStripMenuItem1.Text = "По убыванию";
+            this.поУбываниюToolStripMenuItem1.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem1_Click);
+            // 
+            // аЯToolStripMenuItem
+            // 
+            this.аЯToolStripMenuItem.Name = "аЯToolStripMenuItem";
+            this.аЯToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.аЯToolStripMenuItem.Text = "А-Я";
+            this.аЯToolStripMenuItem.Click += new System.EventHandler(this.аЯToolStripMenuItem_Click);
+            // 
+            // яАToolStripMenuItem
+            // 
+            this.яАToolStripMenuItem.Name = "яАToolStripMenuItem";
+            this.яАToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.яАToolStripMenuItem.Text = "Я-А";
+            this.яАToolStripMenuItem.Click += new System.EventHandler(this.яАToolStripMenuItem_Click);
+            // 
+            // аЯToolStripMenuItem1
+            // 
+            this.аЯToolStripMenuItem1.Name = "аЯToolStripMenuItem1";
+            this.аЯToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.аЯToolStripMenuItem1.Text = "А-Я";
+            this.аЯToolStripMenuItem1.Click += new System.EventHandler(this.аЯToolStripMenuItem1_Click);
+            // 
+            // яАToolStripMenuItem1
+            // 
+            this.яАToolStripMenuItem1.Name = "яАToolStripMenuItem1";
+            this.яАToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.яАToolStripMenuItem1.Text = "Я-А";
+            this.яАToolStripMenuItem1.Click += new System.EventHandler(this.яАToolStripMenuItem1_Click);
             // 
             // FormMain
             // 
@@ -206,29 +318,46 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBoxSearch_ISI.ResumeLayout(false);
+            this.groupBoxSearch_ISI.PerformLayout();
             this.panelView_ISI.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_ISI)).EndInit();
+            this.contextMenuStrip_ISI.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button buttonHelp_ISI;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_ISI;
+        private System.Windows.Forms.ToolTip toolTip_ISI;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonSave_ISI;
         private System.Windows.Forms.Panel panelView_ISI;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewIn_ISI;
         private System.Windows.Forms.Button buttonStat_ISI;
+        private System.Windows.Forms.Button buttonSort_ISI;
+        private System.Windows.Forms.Button buttonEdit_ISI;
+        private System.Windows.Forms.Button buttonOpenFile_ISI;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxSearch_ISI;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_ISI;
+        private System.Windows.Forms.GroupBox groupBoxSearch_ISI;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_ISI;
+        private System.Windows.Forms.ToolStripMenuItem ценаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem номерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem адресМагазинаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фИОПоставщикаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поВозрастаниюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поУбываниюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поВозрастаниюToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem поУбываниюToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem аЯToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem яАToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem аЯToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem яАToolStripMenuItem1;
     }
 }
 

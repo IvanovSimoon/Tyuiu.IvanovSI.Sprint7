@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using MetroFramework.Components;
 using MetroFramework.Forms;
+using Tyuiu.IvanovSI.Sprint7.Project0.V2.Lib;
 namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
 {
     public partial class FormMain : MetroForm
@@ -18,100 +19,208 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         {
             InitializeComponent();
         }
-        static string openFilePath;
-        static int rows;
-        static int colums;
-        
-       
-        private DataTable ReadCSVFile(string pathToCsvFile)
-        {
-            DataTable dt = new DataTable();
+        DataService ds = new DataService();
 
-            DataColumn colMagaz;
-            colMagaz = new DataColumn("Магазин", typeof(String));
-            DataColumn colName;
-            colName = new DataColumn("Название", typeof(String));
-            DataColumn colFio; // Fio Vladeltsev magazina
-            colFio = new DataColumn("ФИО", typeof(String));
-            DataColumn colFioP; // Fio Vladeltsev magazina
-            colFioP = new DataColumn("ФИО Поставщика", typeof(String));
-            DataColumn colAdress;
-            colAdress = new DataColumn("Адресс Магазина", typeof(String));
-            DataColumn colTN; // Telephone number magazina
-            colTN = new DataColumn("Номер телефона магазина", typeof(Double));
-            DataColumn colTNP; // Telophone number postavshika
-            colTNP = new DataColumn("Номер телефона поставщика", typeof(Double));
-            DataColumn colSP;
-            colSP = new DataColumn("Стоимость поставки", typeof(Double)); // Cтоимость поставки у поставщика
-            //добавляем колонки в таблицу
-            dt.Columns.AddRange(new DataColumn[] { colMagaz, colName, colFio, colAdress, colTN, colTNP, colSP });
-            try
-            {
-                DataRow dr = null;
-                string[] magValues = null;
-                string[] mag = File.ReadAllLines(pathToCsvFile);
-                for (int i = 0; i < mag.Length; i++)
-                {
-                    if (!string.IsNullOrEmpty(mag[i]))
-                    {
-                        magValues = mag[i].Split(';');
 
-                        // Проверка, что в массиве достаточно элементов
-                        if (magValues.Length >= 8)
-                        {
-                            dr = dt.NewRow();
-                            dr["Магазин"] = magValues[0];
-                            dr["Название"] = magValues[1];
-                            dr["ФИО"] = magValues[2];
-                            dr["ФИО поставщика"] = magValues[3];
 
-                            int numberOfCores;
-                            if (int.TryParse(magValues[4], out numberOfCores))
-                                dr["Адресс Магазина"] = numberOfCores;
 
-                            double ramSize;
-                            if (double.TryParse(magValues[5], out ramSize))
-                                dr["Номер телефона магазина"] = ramSize;
-
-                            double diagonalSize;
-                            if (double.TryParse(magValues[6], out diagonalSize))
-                                dr["Номер телефона поставщика"] = diagonalSize;
-
-                            double releaseYear;
-                            if (double.TryParse(magValues[7], out releaseYear))
-                                dr["Стоимость поставки"] = releaseYear;
-
-                            // добавляем строку в таблицу
-                            dt.Rows.Add(dr);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Ошибка в строке {i + 1}. Недостаточно данных.");
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Произошла ошибка при чтении файла: {ex.Message}");
-            }
-            return dt;
-        }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
-        
+
 
         private void buttonStat_ISI_Click(object sender, EventArgs e)
         {
-            FormStat formStat = new FormStat();
-            formStat.ShowDialog();
+            /*FormStat formStat = new FormStat();
+            formStat.ShowDialog();*/
+        }
+
+        public static string[,] LoadFromFileData(string filePath)
+        {
+            string fileData = File.ReadAllText(filePath, Encoding.Default);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = lines.Length;
+            int columns = lines[0].Split(';').Length;
+            string[,] arrayValues = new string[rows, columns];
+
+            for (int r = 0; r < rows; r++)
+            {
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < columns; c++)
+                {
+                    arrayValues[r, c] = line_r[c];
+                }
+            }
+
+            return arrayValues;
+        }
+        private void LoadDataIntoDataGridView(string filePath)
+        {
+            // загружаем данные из файла с помощью метода LoadFromFileData
+            string[,] dataArray = LoadFromFileData(filePath);
+
+            // очищаем DataGridView перед загрузкой новых данных
+            dataGridViewIn_ISI.Rows.Clear();
+            dataGridViewIn_ISI.Columns.Clear();
+
+            // добавляем столбцы в DataGridView
+            for (int i = 0; i < dataArray.GetLength(1); i++)
+            {
+                dataGridViewIn_ISI.Columns.Add("", dataArray[0, i]);
+            }
+
+            // добавляем строки с данными из CSV файла
+            for (int i = 1; i < dataArray.GetLength(0); i++)
+            {
+                List<string> rowData = new List<string>();
+                for (int j = 0; j < dataArray.GetLength(1); j++)
+                {
+                    rowData.Add(dataArray[i, j]);
+                }
+                dataGridViewIn_ISI.Rows.Add(rowData.ToArray());
+            }
+        }
+        private void buttonHelp_ISI_Click(object sender, EventArgs e)
+        {
+            /*FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();*/
+        }
+
+        private void buttonOpenFile_ISI_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog_IJD = new OpenFileDialog();
+            openFileDialog_IJD.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
+            if (openFileDialog_IJD.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog_IJD.FileName;
+
+                // загружаем данные в DataGridView с помощью метода LoadDataIntoDataGridView
+                LoadDataIntoDataGridView(filePath);
+            }
+        }
+
+        private void buttonSave_ISI_Click(object sender, EventArgs e)
+        {
+            saveFileDialog_ISI.FileName = "OutPutMagaz.csv";
+            saveFileDialog_ISI.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog_ISI.ShowDialog();
+
+            string path = saveFileDialog_ISI.FileName;
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            if (fileExists)
+            {
+                File.Delete(path);
+            }
+
+            int rows = dataGridViewIn_ISI.RowCount;
+            int columns = dataGridViewIn_ISI.ColumnCount;
+
+            string str = "Название;Номер;Адрес;Телефон магазина;Фио поставщика;Телефон поставщика;Стоимость поставки\n";
+            for (int i = 0; i < rows - 1; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j != columns - 1)
+                    {
+                        str = str + dataGridViewIn_ISI.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewIn_ISI.Rows[i].Cells[j].Value;
+                    }
+                }
+                File.AppendAllText(path, str + Environment.NewLine,Encoding.Default);
+                str = "";
+            }
+
+            DialogResult dialogres = MessageBox.Show("Файл " + path + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (dialogres == DialogResult.Yes)
+            {
+                System.Diagnostics.Process txt = new System.Diagnostics.Process();
+                txt.StartInfo.FileName = "notepad.exe";
+                txt.StartInfo.Arguments = path;
+                txt.Start();
+            }
+        }
+
+        private void textBoxSearch_ISI_TextChanged(object sender, EventArgs e)
+        {
+            string searchValue = textBoxSearch_ISI.Text.ToLower();
+
+            foreach (DataGridViewRow row in dataGridViewIn_ISI.Rows)
+            {
+                if (row.IsNewRow) continue; // пропускаем недобавленные строки
+
+                bool found = false;
+
+                for (int j = 0; j < dataGridViewIn_ISI.Columns.Count; j++)
+                {
+                    if (row.Cells[j].Value != null && row.Cells[j].Value.ToString().ToLower().Contains(searchValue))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.Visible = found;
+            }
+        }
+
+        private void buttonSort_ISI_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip_ISI.Show(buttonSort_ISI, 1, buttonSort_ISI.Height);
+
+        }
+
+        private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[6], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[6], ListSortDirection.Descending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[1], ListSortDirection.Descending);
+        }
+
+        private void аЯToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void яАToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void аЯToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[4], ListSortDirection.Ascending);
+        }
+
+        private void яАToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[4], ListSortDirection.Descending);
         }
     }
-   
-}   
+}
+    
+        
 
