@@ -35,26 +35,9 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
 
         private void buttonStat_ISI_Click(object sender, EventArgs e)
         {
-            
-
-            if (dataGridViewIn_ISI.SelectedCells.Count > 0)
-            {
-                // Получаем индекс выбранной ячейки
-                int selectedColumnIndex = dataGridViewIn_ISI.SelectedCells[6].ColumnIndex;
-
-                // Получаем данные из всех ячеек выбранного столбца
-                List<string> columnData = new List<string>();
-                foreach (DataGridViewRow row in dataGridViewIn_ISI.Rows)
-                {
-                    // Получаем значения ячеек в выбранном столбце
-                    string cellValue = row.Cells[selectedColumnIndex].Value.ToString();
-                    columnData.Add(cellValue);
-                }
-
-                
                 FormStat formStat = new FormStat();
                 formStat.ShowDialog();
-            }
+            
         }
 
         public static string[,] LoadFromFileData(string filePath)

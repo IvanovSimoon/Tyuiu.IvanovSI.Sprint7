@@ -40,14 +40,12 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.labelMin_ISI = new System.Windows.Forms.Label();
             this.labelMid_ISI = new System.Windows.Forms.Label();
             this.chartPrice_ISI = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridViewInStat_ISI = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.chartPrice_ISI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInStat_ISI)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOk_ISI
             // 
-            this.buttonOk_ISI.Location = new System.Drawing.Point(707, 334);
+            this.buttonOk_ISI.Location = new System.Drawing.Point(374, 333);
             this.buttonOk_ISI.Name = "buttonOk_ISI";
             this.buttonOk_ISI.Size = new System.Drawing.Size(75, 23);
             this.buttonOk_ISI.TabIndex = 0;
@@ -57,21 +55,21 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // 
             // textBoxMax_ISI
             // 
-            this.textBoxMax_ISI.Location = new System.Drawing.Point(661, 83);
+            this.textBoxMax_ISI.Location = new System.Drawing.Point(328, 82);
             this.textBoxMax_ISI.Name = "textBoxMax_ISI";
             this.textBoxMax_ISI.Size = new System.Drawing.Size(121, 20);
             this.textBoxMax_ISI.TabIndex = 1;
             // 
             // textBoxMin_ISI
             // 
-            this.textBoxMin_ISI.Location = new System.Drawing.Point(661, 128);
+            this.textBoxMin_ISI.Location = new System.Drawing.Point(328, 127);
             this.textBoxMin_ISI.Name = "textBoxMin_ISI";
             this.textBoxMin_ISI.Size = new System.Drawing.Size(121, 20);
             this.textBoxMin_ISI.TabIndex = 1;
             // 
             // textBoxMid_ISI
             // 
-            this.textBoxMid_ISI.Location = new System.Drawing.Point(661, 171);
+            this.textBoxMid_ISI.Location = new System.Drawing.Point(328, 170);
             this.textBoxMid_ISI.Name = "textBoxMid_ISI";
             this.textBoxMid_ISI.Size = new System.Drawing.Size(121, 20);
             this.textBoxMid_ISI.TabIndex = 1;
@@ -79,7 +77,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // labelMax_ISI
             // 
             this.labelMax_ISI.AutoSize = true;
-            this.labelMax_ISI.Location = new System.Drawing.Point(662, 64);
+            this.labelMax_ISI.Location = new System.Drawing.Point(329, 63);
             this.labelMax_ISI.Name = "labelMax_ISI";
             this.labelMax_ISI.Size = new System.Drawing.Size(134, 13);
             this.labelMax_ISI.TabIndex = 2;
@@ -88,7 +86,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // labelMin_ISI
             // 
             this.labelMin_ISI.AutoSize = true;
-            this.labelMin_ISI.Location = new System.Drawing.Point(662, 112);
+            this.labelMin_ISI.Location = new System.Drawing.Point(329, 111);
             this.labelMin_ISI.Name = "labelMin_ISI";
             this.labelMin_ISI.Size = new System.Drawing.Size(128, 13);
             this.labelMin_ISI.TabIndex = 2;
@@ -97,7 +95,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // labelMid_ISI
             // 
             this.labelMid_ISI.AutoSize = true;
-            this.labelMid_ISI.Location = new System.Drawing.Point(662, 155);
+            this.labelMid_ISI.Location = new System.Drawing.Point(329, 154);
             this.labelMid_ISI.Name = "labelMid_ISI";
             this.labelMid_ISI.Size = new System.Drawing.Size(100, 13);
             this.labelMid_ISI.TabIndex = 2;
@@ -109,7 +107,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.chartPrice_ISI.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartPrice_ISI.Legends.Add(legend1);
-            this.chartPrice_ISI.Location = new System.Drawing.Point(356, 64);
+            this.chartPrice_ISI.Location = new System.Drawing.Point(23, 63);
             this.chartPrice_ISI.Name = "chartPrice_ISI";
             series1.ChartArea = "ColumnArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -120,20 +118,11 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.chartPrice_ISI.TabIndex = 3;
             this.chartPrice_ISI.Text = "chart1";
             // 
-            // dataGridViewInStat_ISI
-            // 
-            this.dataGridViewInStat_ISI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInStat_ISI.Location = new System.Drawing.Point(24, 64);
-            this.dataGridViewInStat_ISI.Name = "dataGridViewInStat_ISI";
-            this.dataGridViewInStat_ISI.Size = new System.Drawing.Size(316, 289);
-            this.dataGridViewInStat_ISI.TabIndex = 4;
-            // 
             // FormStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 373);
-            this.Controls.Add(this.dataGridViewInStat_ISI);
+            this.ClientSize = new System.Drawing.Size(469, 373);
             this.Controls.Add(this.chartPrice_ISI);
             this.Controls.Add(this.labelMid_ISI);
             this.Controls.Add(this.labelMin_ISI);
@@ -151,7 +140,6 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.Text = "Статистика";
             this.Load += new System.EventHandler(this.FormStat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartPrice_ISI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInStat_ISI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +155,5 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private System.Windows.Forms.Label labelMin_ISI;
         private System.Windows.Forms.Label labelMid_ISI;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPrice_ISI;
-        private System.Windows.Forms.DataGridView dataGridViewInStat_ISI;
     }
 }
