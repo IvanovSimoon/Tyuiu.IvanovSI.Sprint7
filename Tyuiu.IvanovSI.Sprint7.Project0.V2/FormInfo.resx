@@ -117,35 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="application_form_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_form_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="table_sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table_sort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bullet_arrow_bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullet_arrow_bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="page_white_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\page_white_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2a09gHNnzys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2a09gHNnzys.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2a09gHNnzys1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2a09gHNnzys1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_form_add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_form_add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBoxInfo_ISI.Text" xml:space="preserve">
+    <value>Данная программа представляет собой приложение для работы с CSV файлами. Она позволяет открывать, просматривать, редактировать и сохранять данные в CSV формате. При запуске программы открывается главное окно, в котором расположены следующие элементы управления:
+
+Кнопка "Открыть файл" - позволяет выбрать CSV файл для открытия и просмотра данных в таблице.
+Кнопка "Сохранить файл" - позволяет сохранить измененные данные в CSV файле.
+Кнопка "Добавить" - позволяет добавить новую строку в таблицу.
+Поле "Поиск" - позволяет осуществлять поиск по всем данным в таблице.
+Кнопка "Информация" - позволяет просмотреть информацию о программе.
+Кнопка "Статистика" - позволяет просмотреть статистику по данным в таблице.
+Также в главном окне расположена таблица, в которой отображаются данные из выбранного CSV файла.
+
+При выборе CSV файла с помощью кнопки "Открыть файл", данные из файла загружаются в таблицу. При выборе CSV файла с помощью кнопки "Сохранить файл", измененные данные сохраняются в выбранный файл. При нажатии на кнопку "Добавить" открывается контекстное меню, которое позволяет добавить новую строку в таблицу. При вводе текста в поле "Поиск" происходит фильтрация данных по введенному тексту.
+
+Для добавления новой строки в таблицу необходимо нажать на кнопку "Добавить" и выбрать в контекстном меню пункт "Добавить магазин". После этого откроется форма для ввода данных о магазине. Необходимо заполнить все поля и нажать кнопку "Добавить". Данные о магазине будут добавлены в таблицу.
+
+Для сохранения измененных данных в CSV файле необходимо нажать на кнопку "Сохранить файл". После этого откроется диалоговое окно для выбора файла и места сохранения. После выбора файла и места сохранения измененные данные будут сохранены в выбранный файл.
+
+Для просмотра информации о программе необходимо нажать на кнопку "Информация". После этого откроется окно с информацией о программе.
+
+Для сортировки данных в таблице необходимо нажать на соответствующую кнопку или выбрать пункт в контекстном меню. Данные будут отсортированы по выбранному критерию.
+
+Для просмотра статистики по данным в таблице необходимо нажать на кнопку "Статистика". После этого откроется окно со статистикой по данным в таблице.</value>
   </data>
 </root>

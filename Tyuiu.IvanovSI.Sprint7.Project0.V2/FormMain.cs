@@ -35,8 +35,26 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
 
         private void buttonStat_ISI_Click(object sender, EventArgs e)
         {
-            /*FormStat formStat = new FormStat();
-            formStat.ShowDialog();*/
+            
+
+            if (dataGridViewIn_ISI.SelectedCells.Count > 0)
+            {
+                // Получаем индекс выбранной ячейки
+                int selectedColumnIndex = dataGridViewIn_ISI.SelectedCells[6].ColumnIndex;
+
+                // Получаем данные из всех ячеек выбранного столбца
+                List<string> columnData = new List<string>();
+                foreach (DataGridViewRow row in dataGridViewIn_ISI.Rows)
+                {
+                    // Получаем значения ячеек в выбранном столбце
+                    string cellValue = row.Cells[selectedColumnIndex].Value.ToString();
+                    columnData.Add(cellValue);
+                }
+
+                
+                FormStat formStat = new FormStat();
+                formStat.ShowDialog();
+            }
         }
 
         public static string[,] LoadFromFileData(string filePath)
@@ -93,14 +111,15 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
 
         private void buttonOpenFile_ISI_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog_IJD = new OpenFileDialog();
-            openFileDialog_IJD.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
-            if (openFileDialog_IJD.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog_ISI = new OpenFileDialog();
+            openFileDialog_ISI.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
+            if (openFileDialog_ISI.ShowDialog() == DialogResult.OK)
             {
-                string filePath = openFileDialog_IJD.FileName;
+                string filePath = openFileDialog_ISI.FileName;
 
                 // загружаем данные в DataGridView с помощью метода LoadDataIntoDataGridView
                 LoadDataIntoDataGridView(filePath);
+
             }
         }
 
@@ -255,6 +274,25 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private void яАToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[4], ListSortDirection.Descending);
+        }
+
+        private void buttonAboutProg_ISI_Click(object sender, EventArgs e)
+        {
+            FormInfo formInfo = new FormInfo();
+            formInfo.ShowDialog();
+        }
+
+        private void buttonAdd_ISI_Click(object sender, EventArgs e)
+        {
+            FormAdd addDataForm = new FormAdd();
+            if (addDataForm.ShowDialog() == DialogResult.OK)
+            {
+                
+                string[] rowData = addDataForm.GetRowData();
+
+                
+                dataGridViewIn_ISI.Rows.Add(rowData);
+            }
         }
     }
 }

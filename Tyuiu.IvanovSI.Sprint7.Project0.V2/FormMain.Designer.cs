@@ -31,17 +31,13 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         {
             this.components = new System.ComponentModel.Container();
             this.openFileDialog_ISI = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelFunctions_ISI = new System.Windows.Forms.Panel();
             this.groupBoxSearch_ISI = new System.Windows.Forms.GroupBox();
             this.textBoxSearch_ISI = new System.Windows.Forms.TextBox();
             this.buttonStat_ISI = new System.Windows.Forms.Button();
-            this.buttonSort_ISI = new System.Windows.Forms.Button();
-            this.buttonOpenFile_ISI = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonHelp_ISI = new System.Windows.Forms.Button();
             this.buttonSave_ISI = new System.Windows.Forms.Button();
-            this.panelView_ISI = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelGrid_ISI = new System.Windows.Forms.Panel();
+            this.groupBoxGrid_ISI = new System.Windows.Forms.GroupBox();
             this.dataGridViewIn_ISI = new System.Windows.Forms.DataGridView();
             this.saveFileDialog_ISI = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip_ISI = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -58,10 +54,15 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.аЯToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.яАToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.metroToolTip_ISI = new MetroFramework.Components.MetroToolTip();
-            this.panel1.SuspendLayout();
+            this.buttonAdd_ISI = new System.Windows.Forms.Button();
+            this.buttonSort_ISI = new System.Windows.Forms.Button();
+            this.buttonOpenFile_ISI = new System.Windows.Forms.Button();
+            this.buttonAboutProg_ISI = new System.Windows.Forms.Button();
+            this.buttonHelp_ISI = new System.Windows.Forms.Button();
+            this.panelFunctions_ISI.SuspendLayout();
             this.groupBoxSearch_ISI.SuspendLayout();
-            this.panelView_ISI.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panelGrid_ISI.SuspendLayout();
+            this.groupBoxGrid_ISI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_ISI)).BeginInit();
             this.contextMenuStrip_ISI.SuspendLayout();
             this.SuspendLayout();
@@ -70,20 +71,21 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             // 
             this.openFileDialog_ISI.FileName = "openFileDialog1";
             // 
-            // panel1
+            // panelFunctions_ISI
             // 
-            this.panel1.Controls.Add(this.groupBoxSearch_ISI);
-            this.panel1.Controls.Add(this.buttonStat_ISI);
-            this.panel1.Controls.Add(this.buttonSort_ISI);
-            this.panel1.Controls.Add(this.buttonOpenFile_ISI);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.buttonHelp_ISI);
-            this.panel1.Controls.Add(this.buttonSave_ISI);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 68);
-            this.panel1.TabIndex = 3;
+            this.panelFunctions_ISI.Controls.Add(this.buttonAdd_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.groupBoxSearch_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonStat_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonSort_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonOpenFile_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonAboutProg_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonHelp_ISI);
+            this.panelFunctions_ISI.Controls.Add(this.buttonSave_ISI);
+            this.panelFunctions_ISI.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFunctions_ISI.Location = new System.Drawing.Point(20, 60);
+            this.panelFunctions_ISI.Name = "panelFunctions_ISI";
+            this.panelFunctions_ISI.Size = new System.Drawing.Size(894, 68);
+            this.panelFunctions_ISI.TabIndex = 3;
             // 
             // groupBoxSearch_ISI
             // 
@@ -114,52 +116,6 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonStat_ISI.UseVisualStyleBackColor = true;
             this.buttonStat_ISI.Click += new System.EventHandler(this.buttonStat_ISI_Click);
             // 
-            // buttonSort_ISI
-            // 
-            this.buttonSort_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.table_sort;
-            this.buttonSort_ISI.Location = new System.Drawing.Point(150, 3);
-            this.buttonSort_ISI.Name = "buttonSort_ISI";
-            this.buttonSort_ISI.Size = new System.Drawing.Size(49, 46);
-            this.buttonSort_ISI.TabIndex = 2;
-            this.metroToolTip_ISI.SetToolTip(this.buttonSort_ISI, "Сортировка по столбцам таблицы");
-            this.buttonSort_ISI.UseVisualStyleBackColor = true;
-            this.buttonSort_ISI.Click += new System.EventHandler(this.buttonSort_ISI_Click);
-            // 
-            // buttonOpenFile_ISI
-            // 
-            this.buttonOpenFile_ISI.BackColor = System.Drawing.Color.Gainsboro;
-            this.buttonOpenFile_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.application_add;
-            this.buttonOpenFile_ISI.Location = new System.Drawing.Point(5, 3);
-            this.buttonOpenFile_ISI.Name = "buttonOpenFile_ISI";
-            this.buttonOpenFile_ISI.Size = new System.Drawing.Size(49, 46);
-            this.buttonOpenFile_ISI.TabIndex = 2;
-            this.metroToolTip_ISI.SetToolTip(this.buttonOpenFile_ISI, "Открывает файл формата CSV");
-            this.buttonOpenFile_ISI.UseVisualStyleBackColor = false;
-            this.buttonOpenFile_ISI.Click += new System.EventHandler(this.buttonOpenFile_ISI_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.help;
-            this.button1.Location = new System.Drawing.Point(787, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 46);
-            this.button1.TabIndex = 2;
-            this.metroToolTip_ISI.SetToolTip(this.button1, "Краткое руководство по использованию программы");
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonHelp_ISI
-            // 
-            this.buttonHelp_ISI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.help;
-            this.buttonHelp_ISI.Location = new System.Drawing.Point(842, 3);
-            this.buttonHelp_ISI.Name = "buttonHelp_ISI";
-            this.buttonHelp_ISI.Size = new System.Drawing.Size(49, 46);
-            this.buttonHelp_ISI.TabIndex = 2;
-            this.metroToolTip_ISI.SetToolTip(this.buttonHelp_ISI, "О программе");
-            this.buttonHelp_ISI.UseVisualStyleBackColor = true;
-            this.buttonHelp_ISI.Click += new System.EventHandler(this.buttonHelp_ISI_Click);
-            // 
             // buttonSave_ISI
             // 
             this.buttonSave_ISI.Location = new System.Drawing.Point(543, 3);
@@ -171,27 +127,27 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonSave_ISI.UseVisualStyleBackColor = true;
             this.buttonSave_ISI.Click += new System.EventHandler(this.buttonSave_ISI_Click);
             // 
-            // panelView_ISI
+            // panelGrid_ISI
             // 
-            this.panelView_ISI.Controls.Add(this.groupBox1);
-            this.panelView_ISI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelView_ISI.Location = new System.Drawing.Point(20, 128);
-            this.panelView_ISI.Name = "panelView_ISI";
-            this.panelView_ISI.Padding = new System.Windows.Forms.Padding(5);
-            this.panelView_ISI.Size = new System.Drawing.Size(894, 484);
-            this.panelView_ISI.TabIndex = 4;
+            this.panelGrid_ISI.Controls.Add(this.groupBoxGrid_ISI);
+            this.panelGrid_ISI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGrid_ISI.Location = new System.Drawing.Point(20, 128);
+            this.panelGrid_ISI.Name = "panelGrid_ISI";
+            this.panelGrid_ISI.Padding = new System.Windows.Forms.Padding(5);
+            this.panelGrid_ISI.Size = new System.Drawing.Size(894, 484);
+            this.panelGrid_ISI.TabIndex = 4;
             // 
-            // groupBox1
+            // groupBoxGrid_ISI
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewIn_ISI);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(5, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(884, 474);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxGrid_ISI.Controls.Add(this.dataGridViewIn_ISI);
+            this.groupBoxGrid_ISI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxGrid_ISI.Location = new System.Drawing.Point(5, 5);
+            this.groupBoxGrid_ISI.Name = "groupBoxGrid_ISI";
+            this.groupBoxGrid_ISI.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBoxGrid_ISI.Size = new System.Drawing.Size(884, 474);
+            this.groupBoxGrid_ISI.TabIndex = 0;
+            this.groupBoxGrid_ISI.TabStop = false;
+            this.groupBoxGrid_ISI.Text = "База данных";
             // 
             // dataGridViewIn_ISI
             // 
@@ -309,19 +265,78 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.metroToolTip_ISI.Style = MetroFramework.MetroColorStyle.White;
             this.metroToolTip_ISI.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // buttonAdd_ISI
+            // 
+            this.buttonAdd_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.application_form_add1;
+            this.buttonAdd_ISI.Location = new System.Drawing.Point(157, 3);
+            this.buttonAdd_ISI.Name = "buttonAdd_ISI";
+            this.buttonAdd_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonAdd_ISI.TabIndex = 6;
+            this.metroToolTip_ISI.SetToolTip(this.buttonAdd_ISI, "Добавление новых данных в таблицу");
+            this.buttonAdd_ISI.UseVisualStyleBackColor = true;
+            this.buttonAdd_ISI.Click += new System.EventHandler(this.buttonAdd_ISI_Click);
+            // 
+            // buttonSort_ISI
+            // 
+            this.buttonSort_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.table_sort;
+            this.buttonSort_ISI.Location = new System.Drawing.Point(102, 3);
+            this.buttonSort_ISI.Name = "buttonSort_ISI";
+            this.buttonSort_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonSort_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonSort_ISI, "Сортировка по столбцам таблицы");
+            this.buttonSort_ISI.UseVisualStyleBackColor = true;
+            this.buttonSort_ISI.Click += new System.EventHandler(this.buttonSort_ISI_Click);
+            // 
+            // buttonOpenFile_ISI
+            // 
+            this.buttonOpenFile_ISI.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonOpenFile_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.application_add;
+            this.buttonOpenFile_ISI.Location = new System.Drawing.Point(5, 3);
+            this.buttonOpenFile_ISI.Name = "buttonOpenFile_ISI";
+            this.buttonOpenFile_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonOpenFile_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonOpenFile_ISI, "Открывает файл формата CSV");
+            this.buttonOpenFile_ISI.UseVisualStyleBackColor = false;
+            this.buttonOpenFile_ISI.Click += new System.EventHandler(this.buttonOpenFile_ISI_Click);
+            // 
+            // buttonAboutProg_ISI
+            // 
+            this.buttonAboutProg_ISI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAboutProg_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.information;
+            this.buttonAboutProg_ISI.Location = new System.Drawing.Point(787, 3);
+            this.buttonAboutProg_ISI.Name = "buttonAboutProg_ISI";
+            this.buttonAboutProg_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonAboutProg_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonAboutProg_ISI, "Краткое руководство по использованию программы");
+            this.buttonAboutProg_ISI.UseVisualStyleBackColor = true;
+            this.buttonAboutProg_ISI.Click += new System.EventHandler(this.buttonAboutProg_ISI_Click);
+            // 
+            // buttonHelp_ISI
+            // 
+            this.buttonHelp_ISI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.help;
+            this.buttonHelp_ISI.Location = new System.Drawing.Point(842, 3);
+            this.buttonHelp_ISI.Name = "buttonHelp_ISI";
+            this.buttonHelp_ISI.Size = new System.Drawing.Size(49, 46);
+            this.buttonHelp_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonHelp_ISI, "О программе");
+            this.buttonHelp_ISI.UseVisualStyleBackColor = true;
+            this.buttonHelp_ISI.Click += new System.EventHandler(this.buttonHelp_ISI_Click);
+            // 
             // FormMain
             // 
             this.ClientSize = new System.Drawing.Size(934, 632);
-            this.Controls.Add(this.panelView_ISI);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelGrid_ISI);
+            this.Controls.Add(this.panelFunctions_ISI);
             this.Name = "FormMain";
             this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Text = "Сеть магазинов";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelFunctions_ISI.ResumeLayout(false);
             this.groupBoxSearch_ISI.ResumeLayout(false);
             this.groupBoxSearch_ISI.PerformLayout();
-            this.panelView_ISI.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.panelGrid_ISI.ResumeLayout(false);
+            this.groupBoxGrid_ISI.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_ISI)).EndInit();
             this.contextMenuStrip_ISI.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -331,15 +346,15 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         #endregion
         private System.Windows.Forms.Button buttonHelp_ISI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_ISI;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelFunctions_ISI;
         private System.Windows.Forms.Button buttonSave_ISI;
-        private System.Windows.Forms.Panel panelView_ISI;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panelGrid_ISI;
+        private System.Windows.Forms.GroupBox groupBoxGrid_ISI;
         private System.Windows.Forms.DataGridView dataGridViewIn_ISI;
         private System.Windows.Forms.Button buttonStat_ISI;
         private System.Windows.Forms.Button buttonSort_ISI;
         private System.Windows.Forms.Button buttonOpenFile_ISI;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAboutProg_ISI;
         private System.Windows.Forms.TextBox textBoxSearch_ISI;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_ISI;
         private System.Windows.Forms.GroupBox groupBoxSearch_ISI;
@@ -357,6 +372,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private System.Windows.Forms.ToolStripMenuItem аЯToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem яАToolStripMenuItem1;
         private MetroFramework.Components.MetroToolTip metroToolTip_ISI;
+        private System.Windows.Forms.Button buttonAdd_ISI;
     }
 }
 
