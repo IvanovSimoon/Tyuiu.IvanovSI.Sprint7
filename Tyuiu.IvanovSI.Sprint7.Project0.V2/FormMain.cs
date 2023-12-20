@@ -87,8 +87,8 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         }
         private void buttonHelp_ISI_Click(object sender, EventArgs e)
         {
-            /*FormAbout formAbout = new FormAbout();
-            formAbout.ShowDialog();*/
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
         }
 
         private void buttonOpenFile_ISI_Click(object sender, EventArgs e)
@@ -177,27 +177,64 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private void buttonSort_ISI_Click(object sender, EventArgs e)
         {
             contextMenuStrip_ISI.Show(buttonSort_ISI, 1, buttonSort_ISI.Height);
-
         }
 
         private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[6], ListSortDirection.Ascending);
         }
 
         private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            dataGridViewIn_ISI.Columns[6].SortMode = DataGridViewColumnSortMode.Programmatic;
             dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[6], ListSortDirection.Descending);
         }
 
         private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[1], ListSortDirection.Ascending);
+            for (int i = 0; i < dataGridViewIn_ISI.Rows.Count - 1; i++)
+            {
+                for (int j = i + 1; j < dataGridViewIn_ISI.Rows.Count; j++)
+                {
+                    if (dataGridViewIn_ISI.Rows[i].Cells[1].Value != null && dataGridViewIn_ISI.Rows[j].Cells[1].Value != null)
+                    {
+                        if (Convert.ToDouble(dataGridViewIn_ISI.Rows[i].Cells[1].Value) > Convert.ToDouble(dataGridViewIn_ISI.Rows[j].Cells[1].Value))
+                        {
+                            
+                            for (int k = 0; k < dataGridViewIn_ISI.Columns.Count; k++)
+                            {
+                                object temp = dataGridViewIn_ISI.Rows[i].Cells[k].Value;
+                                dataGridViewIn_ISI.Rows[i].Cells[k].Value = dataGridViewIn_ISI.Rows[j].Cells[k].Value;
+                                dataGridViewIn_ISI.Rows[j].Cells[k].Value = temp;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_ISI.Sort(dataGridViewIn_ISI.Columns[1], ListSortDirection.Descending);
+            for (int i = 0; i < dataGridViewIn_ISI.Rows.Count - 1; i++)
+            {
+                for (int j = i + 1; j < dataGridViewIn_ISI.Rows.Count; j++)
+                {
+                    if (dataGridViewIn_ISI.Rows[i].Cells[1].Value != null && dataGridViewIn_ISI.Rows[j].Cells[1].Value != null)
+                    {
+                        if (Convert.ToDouble(dataGridViewIn_ISI.Rows[i].Cells[1].Value) < Convert.ToDouble(dataGridViewIn_ISI.Rows[j].Cells[1].Value))
+                        {
+                            
+                            for (int k = 0; k < dataGridViewIn_ISI.Columns.Count; k++)
+                            {
+                                object temp = dataGridViewIn_ISI.Rows[i].Cells[k].Value;
+                                dataGridViewIn_ISI.Rows[i].Cells[k].Value = dataGridViewIn_ISI.Rows[j].Cells[k].Value;
+                                dataGridViewIn_ISI.Rows[j].Cells[k].Value = temp;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void аЯToolStripMenuItem_Click(object sender, EventArgs e)

@@ -31,13 +31,11 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         {
             this.components = new System.ComponentModel.Container();
             this.openFileDialog_ISI = new System.Windows.Forms.OpenFileDialog();
-            this.toolTip_ISI = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxSearch_ISI = new System.Windows.Forms.GroupBox();
             this.textBoxSearch_ISI = new System.Windows.Forms.TextBox();
             this.buttonStat_ISI = new System.Windows.Forms.Button();
             this.buttonSort_ISI = new System.Windows.Forms.Button();
-            this.buttonEdit_ISI = new System.Windows.Forms.Button();
             this.buttonOpenFile_ISI = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonHelp_ISI = new System.Windows.Forms.Button();
@@ -48,17 +46,18 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.saveFileDialog_ISI = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip_ISI = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.номерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.адресМагазинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.фИОПоставщикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поВозрастаниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поУбываниюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.номерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поВозрастаниюToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.поУбываниюToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.адресМагазинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аЯToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.яАToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фИОПоставщикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аЯToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.яАToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroToolTip_ISI = new MetroFramework.Components.MetroToolTip();
             this.panel1.SuspendLayout();
             this.groupBoxSearch_ISI.SuspendLayout();
             this.panelView_ISI.SuspendLayout();
@@ -76,7 +75,6 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.panel1.Controls.Add(this.groupBoxSearch_ISI);
             this.panel1.Controls.Add(this.buttonStat_ISI);
             this.panel1.Controls.Add(this.buttonSort_ISI);
-            this.panel1.Controls.Add(this.buttonEdit_ISI);
             this.panel1.Controls.Add(this.buttonOpenFile_ISI);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonHelp_ISI);
@@ -112,6 +110,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonStat_ISI.Size = new System.Drawing.Size(116, 35);
             this.buttonStat_ISI.TabIndex = 3;
             this.buttonStat_ISI.Text = "Статистика";
+            this.metroToolTip_ISI.SetToolTip(this.buttonStat_ISI, "Выводит элементы статистики таблицы");
             this.buttonStat_ISI.UseVisualStyleBackColor = true;
             this.buttonStat_ISI.Click += new System.EventHandler(this.buttonStat_ISI_Click);
             // 
@@ -122,17 +121,9 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonSort_ISI.Name = "buttonSort_ISI";
             this.buttonSort_ISI.Size = new System.Drawing.Size(49, 46);
             this.buttonSort_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonSort_ISI, "Сортировка по столбцам таблицы");
             this.buttonSort_ISI.UseVisualStyleBackColor = true;
             this.buttonSort_ISI.Click += new System.EventHandler(this.buttonSort_ISI_Click);
-            // 
-            // buttonEdit_ISI
-            // 
-            this.buttonEdit_ISI.Image = global::Tyuiu.IvanovSI.Sprint7.Project0.V2.Properties.Resources.page_white_edit;
-            this.buttonEdit_ISI.Location = new System.Drawing.Point(95, 3);
-            this.buttonEdit_ISI.Name = "buttonEdit_ISI";
-            this.buttonEdit_ISI.Size = new System.Drawing.Size(49, 46);
-            this.buttonEdit_ISI.TabIndex = 2;
-            this.buttonEdit_ISI.UseVisualStyleBackColor = true;
             // 
             // buttonOpenFile_ISI
             // 
@@ -142,6 +133,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonOpenFile_ISI.Name = "buttonOpenFile_ISI";
             this.buttonOpenFile_ISI.Size = new System.Drawing.Size(49, 46);
             this.buttonOpenFile_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonOpenFile_ISI, "Открывает файл формата CSV");
             this.buttonOpenFile_ISI.UseVisualStyleBackColor = false;
             this.buttonOpenFile_ISI.Click += new System.EventHandler(this.buttonOpenFile_ISI_Click);
             // 
@@ -153,6 +145,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(49, 46);
             this.button1.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.button1, "Краткое руководство по использованию программы");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // buttonHelp_ISI
@@ -163,6 +156,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonHelp_ISI.Name = "buttonHelp_ISI";
             this.buttonHelp_ISI.Size = new System.Drawing.Size(49, 46);
             this.buttonHelp_ISI.TabIndex = 2;
+            this.metroToolTip_ISI.SetToolTip(this.buttonHelp_ISI, "О программе");
             this.buttonHelp_ISI.UseVisualStyleBackColor = true;
             this.buttonHelp_ISI.Click += new System.EventHandler(this.buttonHelp_ISI_Click);
             // 
@@ -173,6 +167,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.buttonSave_ISI.Size = new System.Drawing.Size(116, 35);
             this.buttonSave_ISI.TabIndex = 2;
             this.buttonSave_ISI.Text = "Сохранить ";
+            this.metroToolTip_ISI.SetToolTip(this.buttonSave_ISI, "Сохранить файл в формате CSV");
             this.buttonSave_ISI.UseVisualStyleBackColor = true;
             this.buttonSave_ISI.Click += new System.EventHandler(this.buttonSave_ISI_Click);
             // 
@@ -215,7 +210,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.адресМагазинаToolStripMenuItem,
             this.фИОПоставщикаToolStripMenuItem});
             this.contextMenuStrip_ISI.Name = "contextMenuStrip_ISI";
-            this.contextMenuStrip_ISI.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip_ISI.Size = new System.Drawing.Size(181, 92);
             // 
             // ценаToolStripMenuItem
             // 
@@ -226,6 +221,20 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.ценаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ценаToolStripMenuItem.Text = "Цена";
             // 
+            // поВозрастаниюToolStripMenuItem
+            // 
+            this.поВозрастаниюToolStripMenuItem.Name = "поВозрастаниюToolStripMenuItem";
+            this.поВозрастаниюToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.поВозрастаниюToolStripMenuItem.Text = "По возрастанию";
+            this.поВозрастаниюToolStripMenuItem.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem_Click);
+            // 
+            // поУбываниюToolStripMenuItem
+            // 
+            this.поУбываниюToolStripMenuItem.Name = "поУбываниюToolStripMenuItem";
+            this.поУбываниюToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.поУбываниюToolStripMenuItem.Text = "По убыванию";
+            this.поУбываниюToolStripMenuItem.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem_Click);
+            // 
             // номерToolStripMenuItem
             // 
             this.номерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -234,6 +243,20 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.номерToolStripMenuItem.Name = "номерToolStripMenuItem";
             this.номерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.номерToolStripMenuItem.Text = "Номер";
+            // 
+            // поВозрастаниюToolStripMenuItem1
+            // 
+            this.поВозрастаниюToolStripMenuItem1.Name = "поВозрастаниюToolStripMenuItem1";
+            this.поВозрастаниюToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.поВозрастаниюToolStripMenuItem1.Text = "По возрастанию";
+            this.поВозрастаниюToolStripMenuItem1.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem1_Click);
+            // 
+            // поУбываниюToolStripMenuItem1
+            // 
+            this.поУбываниюToolStripMenuItem1.Name = "поУбываниюToolStripMenuItem1";
+            this.поУбываниюToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.поУбываниюToolStripMenuItem1.Text = "По убыванию";
+            this.поУбываниюToolStripMenuItem1.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem1_Click);
             // 
             // адресМагазинаToolStripMenuItem
             // 
@@ -244,6 +267,20 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.адресМагазинаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.адресМагазинаToolStripMenuItem.Text = "Название магазина";
             // 
+            // аЯToolStripMenuItem
+            // 
+            this.аЯToolStripMenuItem.Name = "аЯToolStripMenuItem";
+            this.аЯToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.аЯToolStripMenuItem.Text = "А-Я";
+            this.аЯToolStripMenuItem.Click += new System.EventHandler(this.аЯToolStripMenuItem_Click);
+            // 
+            // яАToolStripMenuItem
+            // 
+            this.яАToolStripMenuItem.Name = "яАToolStripMenuItem";
+            this.яАToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.яАToolStripMenuItem.Text = "Я-А";
+            this.яАToolStripMenuItem.Click += new System.EventHandler(this.яАToolStripMenuItem_Click);
+            // 
             // фИОПоставщикаToolStripMenuItem
             // 
             this.фИОПоставщикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -253,61 +290,24 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
             this.фИОПоставщикаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фИОПоставщикаToolStripMenuItem.Text = "ФИО поставщика";
             // 
-            // поВозрастаниюToolStripMenuItem
-            // 
-            this.поВозрастаниюToolStripMenuItem.Name = "поВозрастаниюToolStripMenuItem";
-            this.поВозрастаниюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.поВозрастаниюToolStripMenuItem.Text = "По возрастанию";
-            this.поВозрастаниюToolStripMenuItem.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem_Click);
-            // 
-            // поУбываниюToolStripMenuItem
-            // 
-            this.поУбываниюToolStripMenuItem.Name = "поУбываниюToolStripMenuItem";
-            this.поУбываниюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.поУбываниюToolStripMenuItem.Text = "По убыванию";
-            this.поУбываниюToolStripMenuItem.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem_Click);
-            // 
-            // поВозрастаниюToolStripMenuItem1
-            // 
-            this.поВозрастаниюToolStripMenuItem1.Name = "поВозрастаниюToolStripMenuItem1";
-            this.поВозрастаниюToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.поВозрастаниюToolStripMenuItem1.Text = "По возрастанию";
-            this.поВозрастаниюToolStripMenuItem1.Click += new System.EventHandler(this.поВозрастаниюToolStripMenuItem1_Click);
-            // 
-            // поУбываниюToolStripMenuItem1
-            // 
-            this.поУбываниюToolStripMenuItem1.Name = "поУбываниюToolStripMenuItem1";
-            this.поУбываниюToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.поУбываниюToolStripMenuItem1.Text = "По убыванию";
-            this.поУбываниюToolStripMenuItem1.Click += new System.EventHandler(this.поУбываниюToolStripMenuItem1_Click);
-            // 
-            // аЯToolStripMenuItem
-            // 
-            this.аЯToolStripMenuItem.Name = "аЯToolStripMenuItem";
-            this.аЯToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.аЯToolStripMenuItem.Text = "А-Я";
-            this.аЯToolStripMenuItem.Click += new System.EventHandler(this.аЯToolStripMenuItem_Click);
-            // 
-            // яАToolStripMenuItem
-            // 
-            this.яАToolStripMenuItem.Name = "яАToolStripMenuItem";
-            this.яАToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.яАToolStripMenuItem.Text = "Я-А";
-            this.яАToolStripMenuItem.Click += new System.EventHandler(this.яАToolStripMenuItem_Click);
-            // 
             // аЯToolStripMenuItem1
             // 
             this.аЯToolStripMenuItem1.Name = "аЯToolStripMenuItem1";
-            this.аЯToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.аЯToolStripMenuItem1.Size = new System.Drawing.Size(94, 22);
             this.аЯToolStripMenuItem1.Text = "А-Я";
             this.аЯToolStripMenuItem1.Click += new System.EventHandler(this.аЯToolStripMenuItem1_Click);
             // 
             // яАToolStripMenuItem1
             // 
             this.яАToolStripMenuItem1.Name = "яАToolStripMenuItem1";
-            this.яАToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.яАToolStripMenuItem1.Size = new System.Drawing.Size(94, 22);
             this.яАToolStripMenuItem1.Text = "Я-А";
             this.яАToolStripMenuItem1.Click += new System.EventHandler(this.яАToolStripMenuItem1_Click);
+            // 
+            // metroToolTip_ISI
+            // 
+            this.metroToolTip_ISI.Style = MetroFramework.MetroColorStyle.White;
+            this.metroToolTip_ISI.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // FormMain
             // 
@@ -331,7 +331,6 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         #endregion
         private System.Windows.Forms.Button buttonHelp_ISI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_ISI;
-        private System.Windows.Forms.ToolTip toolTip_ISI;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSave_ISI;
         private System.Windows.Forms.Panel panelView_ISI;
@@ -339,7 +338,6 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private System.Windows.Forms.DataGridView dataGridViewIn_ISI;
         private System.Windows.Forms.Button buttonStat_ISI;
         private System.Windows.Forms.Button buttonSort_ISI;
-        private System.Windows.Forms.Button buttonEdit_ISI;
         private System.Windows.Forms.Button buttonOpenFile_ISI;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxSearch_ISI;
@@ -358,6 +356,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private System.Windows.Forms.ToolStripMenuItem яАToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem аЯToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem яАToolStripMenuItem1;
+        private MetroFramework.Components.MetroToolTip metroToolTip_ISI;
     }
 }
 
