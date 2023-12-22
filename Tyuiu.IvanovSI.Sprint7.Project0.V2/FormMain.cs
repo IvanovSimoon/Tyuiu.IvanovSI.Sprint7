@@ -62,20 +62,20 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         }
         private void LoadDataIntoDataGridView(string filePath)
         {
-            // загружаем данные из файла с помощью метода LoadFromFileData
+            
             string[,] dataArray = LoadFromFileData(filePath);
 
-            // очищаем DataGridView перед загрузкой новых данных
+            
             dataGridViewIn_ISI.Rows.Clear();
             dataGridViewIn_ISI.Columns.Clear();
 
-            // добавляем столбцы в DataGridView
+           
             for (int i = 0; i < dataArray.GetLength(1); i++)
             {
                 dataGridViewIn_ISI.Columns.Add("", dataArray[0, i]);
             }
 
-            // добавляем строки с данными из CSV файла
+            
             for (int i = 1; i < dataArray.GetLength(0); i++)
             {
                 List<string> rowData = new List<string>();
@@ -95,12 +95,12 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
         private void buttonOpenFile_ISI_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog_ISI = new OpenFileDialog();
-            openFileDialog_ISI.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
+            openFileDialog_ISI.Filter = "csv Files|*.csv"; 
             if (openFileDialog_ISI.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog_ISI.FileName;
 
-                // загружаем данные в DataGridView с помощью метода LoadDataIntoDataGridView
+                
                 LoadDataIntoDataGridView(filePath);
 
             }
@@ -159,7 +159,7 @@ namespace Tyuiu.IvanovSI.Sprint7.Project0.V2
 
             foreach (DataGridViewRow row in dataGridViewIn_ISI.Rows)
             {
-                if (row.IsNewRow) continue; // пропускаем недобавленные строки
+                if (row.IsNewRow) continue; 
 
                 bool found = false;
 
